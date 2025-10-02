@@ -191,7 +191,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         actions: [
           TextButton(
             onPressed: () {
-              setState(() {
+    setState(() {
                 _history.clear();
               });
               Navigator.pop(context);
@@ -214,7 +214,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       data: _isDarkMode ? ThemeData.dark() : ThemeData.light(),
       child: Scaffold(
         backgroundColor: _isDarkMode ? Colors.grey[900] : Colors.grey[100],
-        appBar: AppBar(
+      appBar: AppBar(
           title: const Text('Calculator App'),
           backgroundColor: _isDarkMode ? Colors.grey[800] : Colors.deepPurple,
           foregroundColor: Colors.white,
@@ -247,7 +247,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   ),
                 ],
               ),
-              child: Column(
+        child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   if (_previousValue.isNotEmpty && _operator.isNotEmpty)
@@ -259,7 +259,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       ),
                     ),
                   const SizedBox(height: 8),
-                  Text(
+            Text(
                     _display,
                     style: TextStyle(
                       fontSize: 36,
